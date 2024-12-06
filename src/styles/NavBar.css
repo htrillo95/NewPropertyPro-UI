@@ -123,7 +123,6 @@
     gap: 20px;
     transition: right 0.3s ease; /* Smooth sliding animation */
     z-index: 999;
-    
 }
 
 /* When the menu is active */
@@ -147,4 +146,46 @@
     .nav-links.active {
         right: auto; /* No effect on desktop */
     }
+}
+
+/* Navigation Links Inside Mobile Menu */
+.nav-links.mobile a,
+.nav-links.mobile .logout-btn {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Match other links' color */
+    font-weight: 500; /* Match font weight */
+    padding: 10px 0; /* Add spacing */
+    text-align: center; /* Center-align text */
+    display: block; /* Make it behave like block-level elements */
+    width: 100%; /* Full width for easy tap */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover Effect for All Links in Mobile */
+.nav-links.mobile a:hover,
+.nav-links.mobile .logout-btn:hover {
+    color: #007bff; /* Add hover color */
+}
+
+/* General Logout Button Styles for Desktop */
+.logout-btn {
+    background-color: #f8f9fa; /* Light grey background */
+    color: #495057; /* Dark grey text */
+    border: 1px solid #ced4da; /* Light grey border */
+    padding: 5px 10px; /* Compact size */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Slightly larger for readability */
+    font-weight: 500; /* Semi-bold text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    margin-left: 15px; /* Space between Logout and other links */
+    display: inline-block; /* Ensure button styling applies uniformly */
+    text-align: center; /* Center-align text */
+}
+
+/* Hover Effect for Logout Button (Desktop) */
+.logout-btn:hover {
+    background-color: #e9ecef; /* Slightly darker grey background */
+    color: #212529; /* Darker grey text */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }

@@ -44,14 +44,12 @@ function NavBar({ role, handleLogout }) {
                 {role === 'admin' && (
                     <Link to="/admin" onClick={handleNavigation}>Admin Panel</Link>
                 )}
+                {role !== '' && (
+                    <span onClick={handleLogout} className="logout-btn">
+                        Logout
+                    </span>
+                )}
             </div>
-
-            {/* Logout Button */}
-            {role !== '' && (
-                <button onClick={handleLogout} className="logout-btn">
-                    Logout
-                </button>
-            )}
         </nav>
     );
 }
